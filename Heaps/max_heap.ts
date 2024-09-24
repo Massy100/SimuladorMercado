@@ -1,11 +1,11 @@
 import { Order } from '../Objects/Order';
 
 export class MaxHeap {
-    public heap: Order[]; // Ahora el heap maneja objetos Order
+    public heap: Order[]; 
     private n: number; // n = cantidad de elementos ingresados
 
     constructor(size: number) {
-        this.heap = new Array(size + 1); // El heap comienza en la posición 1
+        this.heap = new Array(size + 1); 
         this.n = 0;
     }
 
@@ -86,7 +86,6 @@ export class MaxHeap {
         }
     }
 
-    // Método para mostrar el contenido del heap
     public print(): void {
         for (let i = 1; i <= this.n; i++) {
             console.log(`Precio: ${this.heap[i].getPrice()}, Cantidad: ${this.heap[i].getQuantity()}`);

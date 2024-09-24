@@ -57,28 +57,25 @@ export class MinHeap {
         return min; // Retornar la orden mínima
     }    
         
-
     private sinkDown(i: number): void {
         while (2 * i <= this.n) {
-            let j: number = 2 * i; // empezamos asumiendo que el hijo izquierdo es el menor
+            let j: number = 2 * i; // se empieza asumiendo que el hijo izquierdo es el menor
             if (j < this.n && this.heap[j].getPrice() > this.heap[j + 1].getPrice())
                 j++; // cambia a hijo derecho si este es el menor
             if (this.heap[i].getPrice() <= this.heap[j].getPrice())
                 break;
-            // Hacemos intercambio burbuja entre los nodos para que el menor quede en la raíz
+            // intercambio burbuja entre los nodos para que el menor quede en la raíz
             let temp: Order = this.heap[i];
             this.heap[i] = this.heap[j];
             this.heap[j] = temp;
-            // verificamos si procede otro intercambio hacia abajo
+            // verificar si procede otro intercambio hacia abajo
             i = j;
         }
     }
 
     public print(): void {
-        let tree: string = "";
         for (let i = 1; i <= this.n; i++) {
-            tree += "[" + this.heap[i].getPrice() + " - " + this.heap[i].getQuantity() + "] ";
+            console.log(`Precio: ${this.heap[i].getPrice()}, Cantidad: ${this.heap[i].getQuantity()}`);
         }
-        console.log(tree);
     }
 }

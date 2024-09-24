@@ -1,15 +1,17 @@
 export class Order {
     private static idCounter: number = 0; 
     private readonly id: number;
+    private type: string;
     private quantity: number;
     private price: number;
     private user: string;
     private company: string;
 
-    constructor(quantity: number, price: number, user: string, company: string) {
+    constructor(type: string, quantity: number, price: number, user: string, company: string) {
         this.id = ++Order.idCounter; 
-        this.setQuantity(quantity);
-        this.setPrice(price);
+        this.type = type;
+        this.quantity = quantity;
+        this.price = price;
         this.user = user;
         this.company = company;
     }
@@ -54,5 +56,13 @@ export class Order {
 
     public getCompany(): string {
         return this.company;
+    }
+
+    public setType(type: string): void {
+        this.type = type;
+    }
+
+    public getType(): string {
+        return this.type;
     }
 }
