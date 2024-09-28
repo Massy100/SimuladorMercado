@@ -15,7 +15,17 @@ let orders = [
     { quantity: 90, price: 97, type: 'sell', user: 'Usuario4', company: 'Tik Tok' },
     { quantity: 100, price: 94, type: 'sell', user: 'Usuario5', company: 'Meta' },
     { quantity: 110, price: 93, type: 'sell', user: 'Usuario5', company: 'Starbucks' },
-    { quantity: 120, price: 91, type: 'sell', user: 'Usuario6', company: 'Macdonals' }
+    { quantity: 120, price: 91, type: 'sell', user: 'Usuario6', company: 'Macdonals' },
+    { quantity: 50, price: 120, type: 'buy', user: 'Usuario7', company: 'Apple' },
+    { quantity: 60, price: 125, type: 'buy', user: 'Usuario7', company: 'Burger King' },
+    { quantity: 70, price: 122, type: 'buy', user: 'Usuario8', company: 'Apple' },
+    { quantity: 40, price: 84, type: 'buy', user: 'Usuario8', company: 'YouTube' },
+    { quantity: 30, price: 83, type: 'buy', user: 'Usuario9', company: 'Burger King' },
+    { quantity: 80, price: 82, type: 'sell', user: 'Usuario9', company: 'YouTube' },
+    { quantity: 90, price: 81, type: 'sell', user: 'Usuario10', company: 'Apple' },
+    { quantity: 100, price: 80, type: 'sell', user: 'Usuario10', company: 'YouTube' },
+    { quantity: 110, price: 79, type: 'sell', user: 'Usuario11', company: 'Apple' },
+    { quantity: 120, price: 78, type: 'sell', user: 'Usuario11', company: 'Burger King' }
 ];
 
 orders.forEach(order => {
